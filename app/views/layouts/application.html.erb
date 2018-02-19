@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsStupidCoaching</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <h1>Stupid coaching !</h1>
+
+    <div class="wrapper">
+          <form action="<%= answer_path %>" >
+            <input type="text" id="address" class="form-control" name="question">
+            <input type="submit" class="btn btn-default" value="Ask!">
+          </form>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>
